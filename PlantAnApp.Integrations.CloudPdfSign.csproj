@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AssemblyName>PlantAnApp.Integrations.CloudPdfSign</AssemblyName>
+		<RootNamespace>PlantAnApp.Integrations.CloudPdfSign</RootNamespace>
+
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugType>pdbonly</DebugType>
+		<OutputPath>bin\$(Configuration)\</OutputPath>
+		<DefineConstants>TRACE;NET40;RELEASE</DefineConstants>
+		<Optimize>true</Optimize>
+		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseAutoBuild|AnyCPU'">
+		<OutputPath>bin\release\</OutputPath>
+		<DefineConstants>TRACE;NET40;RELEASE</DefineConstants>
+		<Optimize>true</Optimize>
+		<DebugType>pdbonly</DebugType>
+		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Develop|AnyCPU'">
+		<DebugSymbols>true</DebugSymbols>
+		<OutputPath>bin\$(Configuration)\</OutputPath>
+		<DefineConstants>TRACE;DEBUG;NET40;DEVELOP</DefineConstants>
+		<DebugType>full</DebugType>
+		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include=".build-package\build.config" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="DotNetNuke.Core" Version="9.9.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="itextsharp">
+	    <HintPath>.lib\itextsharp.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Paperless.DotNetSdk">
+	    <HintPath>.lib\Paperless.DotNetSdk.dll</HintPath>
+	  </Reference>
+	  <Reference Include="System.Configuration" />
+	  <Reference Include="System.ServiceModel" />
+	</ItemGroup>
+
+</Project>

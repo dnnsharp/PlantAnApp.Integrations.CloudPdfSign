@@ -1,0 +1,48 @@
+<dotnetnuke version="5.0" type="Package" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <packages>
+    <package name="PlantAnApp.Integrations.PdfAutoSigner" type="Module" version="01.21.06">
+      <friendlyName>PlantAnApp.Integrations.PdfAutoSigner</friendlyName>
+      <description>PlantAnApp PdfAutoSigner Integration.</description>
+      <iconFile>~/DesktopModules/MVC/PlantAnApp/Integrations/PdfAutoSigner/static/img/um32.png</iconFile>
+      <owner>
+        <name>Plant An App</name>
+        <organization>Plant An App</organization>
+        <url>https://www.plantanapp.com</url>
+        <email>support@plantanapp.com</email>
+      </owner>
+      <azureCompatible>true</azureCompatible>
+      <dependencies>
+        <dependency type="CoreVersion">09.09.00</dependency>
+      </dependencies>
+      <components>
+        <component type="Assembly">
+          <assemblies>
+            <assembly>
+              <name>PlantAnApp.Integrations.PdfAutoSigner.dll</name>
+              <sourceFileName>PlantAnApp.Integrations.PdfAutoSigner.dll</sourceFileName>
+              <version>01.21.06</version>
+            </assembly>
+            <assembly>
+              <name>DnnSharp.Common.dll</name>
+              <sourceFileName>DnnSharp.Common.dll</sourceFileName>
+              <version>05.21.05</version>
+            </assembly>
+            <assembly>
+              <name>DnnSharp.Common2.dll</name>
+              <sourceFileName>DnnSharp.Common2.dll</sourceFileName>
+              <version>05.21.05</version>
+            </assembly>
+          </assemblies>
+        </component>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>DesktopModules</basePath>
+            <resourceFile>
+              <name>Resources.PlantAnApp.Integrations.PdfAutoSigner.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>
