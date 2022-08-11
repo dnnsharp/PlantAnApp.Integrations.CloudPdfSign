@@ -1,9 +1,9 @@
 <dotnetnuke version="5.0" type="Package" xmlns:fo="http://www.w3.org/1999/XSL/Format">
   <packages>
-    <package name="PlantAnApp.Integrations.PdfAutoSigner" type="Module" version="01.21.06">
-      <friendlyName>PlantAnApp.Integrations.PdfAutoSigner</friendlyName>
-      <description>PlantAnApp PdfAutoSigner Integration.</description>
-      <iconFile>~/DesktopModules/MVC/PlantAnApp/Integrations/PdfAutoSigner/static/img/um32.png</iconFile>
+    <package name="PlantAnApp.Integrations.CloudPdf" type="Module" version="01.21.06">
+      <friendlyName>PlantAnApp.Integrations.CloudPdf</friendlyName>
+      <description>PlantAnApp Cloud PDF Sing Integration.</description>
+      <iconFile>~/DesktopModules/MVC/PlantAnApp/Integrations/CloudPdf/static/img/um32.png</iconFile>
       <owner>
         <name>Plant An App</name>
         <organization>Plant An App</organization>
@@ -18,7 +18,7 @@
         <component type="Assembly">
           <assemblies>
             <assembly>
-              <name>PlantAnApp.Integrations.PdfAutoSigner.dll</name>
+              <name>PlantAnApp.Integrations.CloudPdf.dll</name>
               <sourceFileName>PlantAnApp.Integrations.PdfAutoSigner.dll</sourceFileName>
               <version>01.21.06</version>
             </assembly>
@@ -38,7 +38,7 @@
           <resourceFiles>
             <basePath>DesktopModules</basePath>
             <resourceFile>
-              <name>Resources.PlantAnApp.Integrations.PdfAutoSigner.zip</name>
+              <name>Resources.PlantAnApp.Integrations.CloudPdf.zip</name>
             </resourceFile>
           </resourceFiles>
         </component>
