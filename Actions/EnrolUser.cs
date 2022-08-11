@@ -17,7 +17,7 @@ using DnnSharp.Common.IO;
 using System.Xml.Linq;
 using System.Linq;
 
-namespace PlantAnApp.Integrations.PdfAutoSigner.Actions {
+namespace PlantAnApp.Integrations.CloudPdfSign.Actions {
     public class EnrolUser : IActionImpl {
 
         [ActionParameter(ApplyTokens = true)]

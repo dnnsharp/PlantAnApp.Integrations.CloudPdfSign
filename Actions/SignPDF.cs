@@ -21,7 +21,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Linq;
 
-namespace PlantAnApp.Integrations.PdfAutoSigner.Actions {
+namespace PlantAnApp.Integrations.CloudPdfSign.Actions {
     public class SignPDF : IActionImpl {
 
         [ActionParameter(ApplyTokens = true)]

@@ -18,7 +18,7 @@ using System.Xml.Linq;
 using System.Linq;
 using System.Security.Cryptography;
 
-namespace PlantAnApp.Integrations.PdfAutoSigner.Actions {
+namespace PlantAnApp.Integrations.CloudPdfSign.Actions {
     public class ApplyIntermediateSignature : IActionImpl {
 
         [ActionParameter(ApplyTokens = true)]
