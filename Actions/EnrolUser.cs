@@ -92,6 +92,9 @@ namespace PlantAnApp.Integrations.CloudPdfSign.Actions {
         [ActionParameter(IsOutputToken = true)]
         public string FileIdOutputTokenName { get; set; }
 
+        [ActionParameter(ApplyTokens = true)]
+        public ActionEvent OnError { get; set; }
+
 
         public void Init(StringsDictionary actionTypeSettings, SettingsDictionary actionSettings) {
         }
@@ -107,7 +110,10 @@ namespace PlantAnApp.Integrations.CloudPdfSign.Actions {
                         needsEnrolment = true;
                 }
             } catch (Exception ex) {
-                needsEnrolment = true;
+                if (ex is System.ServiceModel.FaultException fault)
+                    needsEnrolment = true;
+                else
+                    throw;
             }
             context[OutputTokenName] = needsEnrolment;
 
@@ -158,9 +164,13 @@ namespace PlantAnApp.Integrations.CloudPdfSign.Actions {
                 if (ex is System.ServiceModel.FaultException fault) {
                     var errorXml = XElement.Parse(fault.CreateMessageFault().GetReaderAtDetailContents().ReadOuterXml());
                     var errorMessage = errorXml.Elements().ToDictionary(key => key.Name.LocalName, val => val.Value)["Message"];
-                    context["EnrolUser"] = errorMessage;
+                    context["Enrol:Error"] = errorMessage;
                     context.Log(DnnSharp.Common.Logging.eLogLevel.Error, errorMessage);
                 }
+                if (OnError.HasActions)
+                    return OnError.Execute(context);
+                else
+                    throw;
             }
 
             return null;
