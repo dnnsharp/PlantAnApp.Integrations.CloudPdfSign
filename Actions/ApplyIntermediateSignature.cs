@@ -18,7 +18,7 @@ using System.Xml.Linq;
 using System.Linq;
 using System.Security.Cryptography;
 
-namespace PlantAnApp.Integrations.PdfAutoSigner.Actions {
+namespace PlantAnApp.Integrations.CloudPdfSign.Actions {
     public class ApplyIntermediateSignature : IActionImpl {
 
         [ActionParameter(ApplyTokens = true)]
@@ -77,6 +77,9 @@ namespace PlantAnApp.Integrations.PdfAutoSigner.Actions {
 
         [ActionParameter(IsOutputToken = true)]
         public string SignatureFieldNameOutputToken { get; set; }
+
+        [ActionParameter(ApplyTokens = true)]
+        public ActionEvent OnError { get; set; }
 
         public void Init(StringsDictionary actionTypeSettings, SettingsDictionary actionSettings) {
         }
@@ -186,9 +189,13 @@ namespace PlantAnApp.Integrations.PdfAutoSigner.Actions {
                 if (ex is System.ServiceModel.FaultException fault) {
                     var errorXml = XElement.Parse(fault.CreateMessageFault().GetReaderAtDetailContents().ReadOuterXml());
                     var errorMessage = errorXml.Elements().ToDictionary(key => key.Name.LocalName, val => val.Value)["Message"];
-                    context["ApplyBlankSignError"] = errorMessage;
+                    context["Presign:Error"] = errorMessage;
                     context.Log(DnnSharp.Common.Logging.eLogLevel.Error, errorMessage);
                 }
+                if (OnError.HasActions)
+                    return OnError.Execute(context);
+                else
+                    throw;
             }
             return null;
         }

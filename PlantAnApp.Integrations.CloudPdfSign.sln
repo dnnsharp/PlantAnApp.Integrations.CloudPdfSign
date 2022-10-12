@@ -3,18 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlantAnApp.Integrations.CloudPdfSign", "PlantAnApp.Integrations.CloudPdfSign.csproj", "{74EBCA3C-03ED-4A79-B074-1EE2E94E8FA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlantAnApp.Integrations.CloudPdfSign", "PlantAnApp.Integrations.CloudPdfSign.csproj", "{74EBCA3C-03ED-4A79-B074-1EE2E94E8FA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DnnSharp.Common", "..\..\..\..\DnnSharp\Common\DnnSharp.Common\DnnSharp.Common.csproj", "{1039C25C-84FF-4F8F-BF26-1BA5D975ED4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Develop|Any CPU = Develop|Any CPU
 		Release|Any CPU = Release|Any CPU
+		ReleaseAutoBuild|Any CPU = ReleaseAutoBuild|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{74EBCA3C-03ED-4A79-B074-1EE2E94E8FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{74EBCA3C-03ED-4A79-B074-1EE2E94E8FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74EBCA3C-03ED-4A79-B074-1EE2E94E8FA0}.Develop|Any CPU.ActiveCfg = Debug|Any CPU
+		{74EBCA3C-03ED-4A79-B074-1EE2E94E8FA0}.Develop|Any CPU.Build.0 = Debug|Any CPU
 		{74EBCA3C-03ED-4A79-B074-1EE2E94E8FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74EBCA3C-03ED-4A79-B074-1EE2E94E8FA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74EBCA3C-03ED-4A79-B074-1EE2E94E8FA0}.ReleaseAutoBuild|Any CPU.ActiveCfg = Release|Any CPU
+		{74EBCA3C-03ED-4A79-B074-1EE2E94E8FA0}.ReleaseAutoBuild|Any CPU.Build.0 = Release|Any CPU
+		{1039C25C-84FF-4F8F-BF26-1BA5D975ED4C}.Debug|Any CPU.ActiveCfg = Develop|Any CPU
+		{1039C25C-84FF-4F8F-BF26-1BA5D975ED4C}.Debug|Any CPU.Build.0 = Develop|Any CPU
+		{1039C25C-84FF-4F8F-BF26-1BA5D975ED4C}.Develop|Any CPU.ActiveCfg = Develop|Any CPU
+		{1039C25C-84FF-4F8F-BF26-1BA5D975ED4C}.Develop|Any CPU.Build.0 = Develop|Any CPU
+		{1039C25C-84FF-4F8F-BF26-1BA5D975ED4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1039C25C-84FF-4F8F-BF26-1BA5D975ED4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1039C25C-84FF-4F8F-BF26-1BA5D975ED4C}.ReleaseAutoBuild|Any CPU.ActiveCfg = ReleaseAutoBuild|Any CPU
+		{1039C25C-84FF-4F8F-BF26-1BA5D975ED4C}.ReleaseAutoBuild|Any CPU.Build.0 = ReleaseAutoBuild|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

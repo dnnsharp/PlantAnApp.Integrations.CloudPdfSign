@@ -40,6 +40,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\..\..\..\DnnSharp\Common\DnnSharp.Common\DnnSharp.Common.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Reference Include="itextsharp">
 	    <HintPath>.lib\itextsharp.dll</HintPath>
 	  </Reference>
@@ -49,5 +53,9 @@
 	  <Reference Include="System.Configuration" />
 	  <Reference Include="System.ServiceModel" />
 	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="if $(ConfigurationName) == Debug goto copyfiles&#xD;&#xA;if $(ConfigurationName) == Develop goto copyfiles&#xD;&#xA;if $(ConfigurationName) == Release goto copyfiles&#xD;&#xA;goto end&#xD;&#xA;&#xD;&#xA;:copyfiles&#xD;&#xA;&#xD;&#xA;xcopy &quot;$(TargetDir)$(TargetName).dll&quot; &quot;$(ProjectDir)..\..\..\..\..\bin\*.*&quot; /y /q&#xD;&#xA;xcopy &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(ProjectDir)..\..\..\..\..\bin\*.*&quot; /y /q&#xD;&#xA;&#xD;&#xA;xcopy &quot;$(ProjectDir)\Config\Common\*.*&quot; &quot;$(ProjectDir)..\..\..\..\DnnSharp\Common\Config\*.*&quot; /e /s /y /q&#xD;&#xA;xcopy &quot;$(ProjectDir).lib\itextsharp.dll&quot; &quot;$(ProjectDir)..\..\..\..\..\bin\*.*&quot; /y /q&#xD;&#xA;xcopy &quot;$(ProjectDir).lib\Paperless.DotNetSdk.dll&quot; &quot;$(ProjectDir)..\..\..\..\..\bin\*.*&quot; /y /q&#xD;&#xA;xcopy &quot;$(ProjectDir).lib\Paperless.DotNetSdk.dll.config&quot; &quot;$(ProjectDir)..\..\..\..\..\bin\*.*&quot; /y /q&#xD;&#xA;&#xD;&#xA;:end" />
+	</Target>
 
 </Project>
