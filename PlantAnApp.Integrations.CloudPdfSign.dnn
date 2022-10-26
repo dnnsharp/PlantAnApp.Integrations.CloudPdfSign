@@ -20,17 +20,17 @@
             <assembly>
               <name>PlantAnApp.Integrations.CloudPdfSign.dll</name>
               <sourceFileName>PlantAnApp.Integrations.CloudPdfSign.dll</sourceFileName>
-              <version>01.21.06</version>
+              <version>01.22.00</version>
             </assembly>
             <assembly>
               <name>DnnSharp.Common.dll</name>
               <sourceFileName>DnnSharp.Common.dll</sourceFileName>
-              <version>05.21.05</version>
+              <version>05.22.19</version>
             </assembly>
             <assembly>
               <name>DnnSharp.Common2.dll</name>
               <sourceFileName>DnnSharp.Common2.dll</sourceFileName>
-              <version>05.21.05</version>
+              <version>05.22.04</version>
             </assembly>
           </assemblies>
         </component>
@@ -57,7 +57,7 @@
             <install>
               <configuration>
                 <nodes>
-                 <node path="//configuration/runtime/ab:assemblyBinding" action="update" targetpath="/configuration/runtime/ab:assemblyBinding/ab:dependentAssembly[ab:assemblyIdentity/@name='itextsharp'][ab:codeBase/@version='4.1.6.0']" collision="ignore" nameSpace="urn:schemas-microsoft-com:asm.v1" nameSpacePrefix="ab">
+                  <node path="//configuration/runtime/ab:assemblyBinding" action="update" targetpath="/configuration/runtime/ab:assemblyBinding/ab:dependentAssembly[ab:assemblyIdentity/@name='itextsharp'][ab:codeBase/@version='4.1.6.0']" collision="ignore" nameSpace="urn:schemas-microsoft-com:asm.v1" nameSpacePrefix="ab">
                     <dependentAssembly xmlns="urn:schemas-microsoft-com:asm.v1">
                       <assemblyIdentity name="itextsharp" publicKeyToken="null" />
                       <codeBase version="4.1.6.0" href="bin\PlantAnApp\itextsharp.dll" />
