@@ -51,7 +51,7 @@
             </file>
           </files>
         </component>
-		<component type="Config">
+        <component type="Config">
           <config>
             <configFile>web.config</configFile>
             <install>
