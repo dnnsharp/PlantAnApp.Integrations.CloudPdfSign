@@ -72,6 +72,12 @@
                 </nodes>
               </configuration>
             </install>
+            <uninstall>
+              <configuration>
+                <nodes>
+                </nodes>
+              </configuration>
+            </uninstall>
           </config>
         </component>
         <component type="ResourceFile">
