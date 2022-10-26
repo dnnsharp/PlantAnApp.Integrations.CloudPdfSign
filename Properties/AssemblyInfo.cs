@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 using System.Security;
 
 
-[assembly: AssemblyTitle("PlantAnApp CloudPdf")]
+[assembly: AssemblyTitle("PlantAnApp CloudPdfSign")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("PlantAnApp")]
-[assembly: AssemblyProduct("PlantAnApp CloudPdf")]
+[assembly: AssemblyProduct("PlantAnApp CloudPdfSign")]
 [assembly: AssemblyCopyright("Copyright � PlantAnApp 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
