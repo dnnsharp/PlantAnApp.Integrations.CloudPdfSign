@@ -34,6 +34,46 @@
             </assembly>
           </assemblies>
         </component>
+        <component type="File">
+          <files>
+            <basePath>bin\PlantAnApp</basePath>
+            <file>
+              <name>Paperless.DotNetSdk.dll.config</name>
+              <sourceFileName>Paperless.DotNetSdk.dll.config</sourceFileName>
+            </file>
+            <file>
+              <name>itextsharp.dll</name>
+              <sourceFileName>itextsharp.dll</sourceFileName>
+            </file>
+            <file>
+              <name>Paperless.DotNetSdk.dll</name>
+              <sourceFileName>Paperless.DotNetSdk.dll</sourceFileName>
+            </file>
+          </files>
+        </component>
+		<component type="Config">
+          <config>
+            <configFile>web.config</configFile>
+            <install>
+              <configuration>
+                <nodes>
+                 <node path="//configuration/runtime/ab:assemblyBinding" action="update" targetpath="/configuration/runtime/ab:assemblyBinding/ab:dependentAssembly[ab:assemblyIdentity/@name='itextsharp'][ab:codeBase/@version='4.1.6.0']" collision="ignore" nameSpace="urn:schemas-microsoft-com:asm.v1" nameSpacePrefix="ab">
+                    <dependentAssembly xmlns="urn:schemas-microsoft-com:asm.v1">
+                      <assemblyIdentity name="itextsharp" publicKeyToken="null" />
+                      <codeBase version="4.1.6.0" href="bin\PlantAnApp\itextsharp.dll" />
+                    </dependentAssembly>
+                  </node>
+                  <node path="//configuration/runtime/ab:assemblyBinding" action="update" targetpath="/configuration/runtime/ab:assemblyBinding/ab:dependentAssembly[ab:assemblyIdentity/@name='Paperless.DotNetSdk'][ab:codeBase/@version='1.0.0.0']" collision="ignore" nameSpace="urn:schemas-microsoft-com:asm.v1" nameSpacePrefix="ab">
+                    <dependentAssembly xmlns="urn:schemas-microsoft-com:asm.v1">
+                      <assemblyIdentity name="Paperless.DotNetSdk" publicKeyToken="null" />
+                      <codeBase version="1.0.0.0" href="bin\PlantAnApp\Paperless.DotNetSdk.dll" />
+                    </dependentAssembly>
+                  </node>
+                </nodes>
+              </configuration>
+            </install>
+          </config>
+        </component>
         <component type="ResourceFile">
           <resourceFiles>
             <basePath>DesktopModules</basePath>
